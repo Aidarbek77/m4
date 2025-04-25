@@ -1,15 +1,10 @@
-from django.contrib import admin
-from django.urls import path, include
-from django.conf import settings
-from django.conf.urls.static import static
-from posts.views import test_review, html_view
+from django.urls import path
+from . import views
+
+app_name = 'posts'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('posts/', include('posts.urls')),
-    path('test/', test_review),
-    path('html/', html_view)
+    path('', views.post_list, name='post_list'),
+    path('create/', views.post_create, name='post_create'),
+    path('<int:post_id>/', views.post_detail, name='post_detail'),
 ]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

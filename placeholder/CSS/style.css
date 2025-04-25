@@ -1,0 +1,46 @@
+/* General styling */
+body {
+    background-color: #f8f9fa;
+}
+
+/* Card styling */
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Image styling */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Post content */
+.post-content {
+    white-space: pre-line;
+}
+
+/* Pagination styling */
+.pagination .page-link {
+    color: #007bff;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Filter form */
+.form-select:focus, .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+/* Badge styling */
+.badge {
+    margin-right: 5px;
+}

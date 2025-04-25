@@ -9,3 +9,6 @@ urlpatterns = [
     path('test/', test_review),
     path('html/', html_view)
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
